@@ -1,0 +1,26 @@
+{
+  "name": "secure-sdlc-lab",
+  "version": "0.1.0",
+  "description": "A hands-on Secure SDLC lab: build a deliberately vulnerable app, then harden it one control at a time with an automated DevSecOps pipeline.",
+  "main": "src/app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/app.js",
+    "seed": "node src/seed.js"
+  },
+  "keywords": [
+    "secure-sdlc",
+    "devsecops",
+    "appsec",
+    "sast",
+    "dast",
+    "sca"
+  ],
+  "author": "akhil65",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "sqlite3": "^5.1.6"
+  }
+}
