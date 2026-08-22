@@ -6,3 +6,13 @@ npm-debug.log*
 .DS_Store
 zap-report*
 trivy-report*
+
+# Editor / tool droppings
+.Rhistory
+**/.Rhistory
+.vscode/
+
+# Editor / tool droppings
+.Rhistory
+**/.Rhistory
+.vscode/
