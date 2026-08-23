@@ -1,0 +1,14 @@
+# Gitleaks configuration for secure-sdlc-lab
+title = "secure-sdlc-lab gitleaks config"
+
+# Start from Gitleaks' built-in ruleset, then add our own on top.
+[extend]
+useDefault = true
+
+# Custom rule: catch our lab's session-secret format.
+[[rules]]
+id = "lab-session-secret"
+description = "Hardcoded lab session secret (sk_lab_ prefix)"
+regex = '''sk_lab_[0-9a-f]{32}'''
+keywords = ["sk_lab_"]
+tags = ["secret", "session"]
