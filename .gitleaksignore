@@ -1,0 +1,10 @@
+# Allowlisted findings — each is a KNOWN, REMEDIATED occurrence of the
+# original lab session secret. The secret was ROTATED in Module 3, so the
+# value in these historical commits is dead and unlocks nothing. History is
+# kept intact (not rewritten) on purpose, as the lab's teaching baseline.
+
+# 1. The original hardcoded secret, in the commit that introduced the app.
+236c41568deb4e4158fe288180f2712541ec550e:src/app.js:lab-session-secret:64
+
+# 2. Intentional reference to the (now-rotated) secret in a lesson doc.
+7eece090ee1a6f21226945f56539627b62604cdf:docs/01-the-vulnerable-app.md:lab-session-secret:162

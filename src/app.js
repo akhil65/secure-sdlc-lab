@@ -24,6 +24,10 @@ const session = require('express-session');
 const { db, init } = require('./db');
 
 const app = express();
+if (!process.env.SESSION_SECRET) {
+  console.error('FATAL: SESSION_SECRET is not set. Copy .env.example to .env first.');
+  process.exit(1);
+}
 const PORT = 3000;
 
 init(); // create the table + seed users on boot
@@ -61,7 +65,7 @@ app.use(express.urlencoded({ extended: false }));
 // ---------------------------------------------------------------------------
 app.use(
   session({
-    secret: 'sk_lab_9f2c4e8a71b3d6f05c8e2a4b7d9f1c3e',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     // ---------------------------------------------------------------------
